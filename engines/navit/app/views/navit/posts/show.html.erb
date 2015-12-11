@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+<h1><%= @post.title %></h1>
+<ul class="list-group">
+  <% comments.each do |c| %>
+    <li class="list-group-item">
+      <%= c.title %>
+      <%= c.body %>
+    </li>
+  <%- end %>
+</ul>
+<%= link_to 'Reply', new_comment_path(post: @post) %>

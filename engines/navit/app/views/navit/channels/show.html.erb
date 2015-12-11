@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+<h1><%= @channel.name %></h1>
+<ul class="list-group">
+  <% @posts.each do |p| %>
+    <li class="list-group-item">
+      <%= link_to p.title, p %>
+    </li>
+  <%- end %>
+</ul>
+<%= link_to 'New Post', new_post_path(channel: @channel) %>

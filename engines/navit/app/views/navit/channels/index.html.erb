@@ -1,0 +1,13 @@
+<h1>Listing channels</h1>
+
+<ul class="list-group">
+<% @channels.each do |channel| %>
+  <li class="list-group-item">
+    <%= link_to channel.name, channel %>
+  </li>
+<% end %>
+</ul>
+
+<br>
+
+<%= link_to 'New Channel', new_channel_path %>
