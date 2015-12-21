@@ -1,3 +1,3 @@
 NavEmployeeHighlights::Engine.routes.draw do
-  get '/*id' => 'employees#show'
+  resources :employees
 end
